@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	font-family:'Nanum Gothic', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/* main container, nav */
+.container {
+	height: 780px;
+	background: url(../main_img/main_img.jpg);
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+}
+
+.navbar_logo img{
+	width: 200px;
+	height: 130px;
+}
+
+.navbar_menu{
+	text-align: center;
+	font-size: 20px;
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar_menu li {
+	padding:10px 50px;
+}
+
+.nav_li:hover {
+	background-color: #f0eceb;
+	border-radius: 4px;
+	
+}
+
+.nav_li:hover ul{
+	display: block;
+}
+
+.subnav {
+	display: none;
+	font-size: 15px;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar_icons {
+	display: flex;
+	color: white;
+	list-style: none;	
+	padding-left: 0;
+	font-size: 30px;
+	margin-right: 35px;
+}
+
+.navbar_icons li {
+	padding: 10px 12px;
+}
+
+.navbar_toogleBtn {
+	display: none;
+	position: absolute;
+	right: 30px;
+	top : 50px;
+	font-size: 24px;
+	color: white;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 8px 24px;
+	}
+	.navbar_menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width: 100%
+	}
+	.navbar_menu li {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.navbar_icons {
+		display: none;
+		justify-content: center;
+		width: 100%;
+	}
+	
+	.navbar_toogleBtn {
+		display: block;
+	}
+	
+	.navbar_menu.active{
+		display: flex;
+	}
+	.navbar_icons.active {
+		display: flex;
+	}
+	
+	.subnav {
+		flex-direction: column;
+		font-size: 15px;
+		list-style: none;
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+/* 메인글 */
+.main_text {
+	width: 100%;
+	margin-top: 90px;
+	text-align: center;
+}
+
+.main_text h4{
+	font-family: 'Nanum Brush Script', cursive;
+	font-size: 45px;
+	font-weight: 100;
+	color: black;
+}
+/* main container, nav */
+
+
+/* amount 선생님 소개*/
+.amount {
+	position: relative;
+	top: -35px;
+	display: flex;
+	width: 100%;
+	background: #fcdcb555;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	margin: auto;
+	margin-top: 37px;
+	
+}
+.amount li {
+	list-style: none;
+	flex: 1;
+	height: 132px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#nametag {
+	margin-top: 20px;
+}
+.amount li div{
+	text-align: center;
+	height: 40px;
+}
+#doc1 {
+	background: #4ea0e0;
+}
+
+#doc2 {
+	background: #e59db2;
+}
+
+#doc3 {
+	background: #aa8ad0;
+}
+
+#doc4 {
+	background: #79c3c7;
+}
+
+.contents1 {
+	font-size: 20px;
+	font-weight: lighter;
+}
+.contents2 {
+	font-size: 24px;
+}
+
+/* main_content 코로나예방, 건강팁, 긴급신고*/
+
+.main_content {
+	width: 100%;
+	height: 600px;
+	background: #f1f2f3;
+	margin-top:-132px;
+}
+
+.main_content li {
+	list-style: none;
+}
+.main_content h1 {
+	padding-top: 116px;
+	text-align: center;
+}
+
+.main_content .about {
+	font-size: 20px;
+	text-align: center;
+}
+
+.icons{
+	display: flex;
+	width: 100%;
+	height: 302px;
+	margin: auto;
+}
+
+.icons li {
+	flex: 1;
+	background: white;
+	margin-top: 49px;
+	height: 302px;
+	text-align: center;
+}
+.icons li .icon_img {
+	margin-top: 18px;
+	text-align: center;
+}
+
+.icons li:not(:last-child){
+	margin-right: 20px;
+}
+
+.main_content_bold {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.icons .main_content_context{
+	width: 180px;
+	font-size: 14px;
+	font-weight: 100;
+	margin: auto;
+	letter-spacing: -0.5px;
+}
+
+.main_content_more{
+	width: 100px;
+	height: 30px;
+	background: #2F7AF4;
+	color: white;
+	line-height: 30px;
+	margin: 25px auto;
+	font-size: 12px;
+}
+
+
+/* main_covid 코로나 예방수칙*/
+.main_covid {
+	width: 100%;
+	height: 659px;
+}
+
+.main_covid h1 {
+	padding-top: 50px;
+	text-align: center;
+}
+.main_covid h1 a {
+	color: black;
+	align-items: center;
+	font-size: 50px;
+}
+.main_covid .about{
+	text-align:center;
+}
+
+.main_covid_content {
+	width: 1560px;
+	height: 500px;
+	display: flex;
+	margin: 49px auto;
+	background-color: #ccebff;
+	box-shadow: 10px 10px ;
+}
+
+.main_covid_content div{
+	margin: auto;
+}
+	
+
+.main_covid_content .main_covid_text {
+	text-align: center;
+	padding: 20px;
+}
+
+
+/* footer */
+.footer {
+	display: flex;
+	height: 150px;
+	width: 100%;
+	background: black;
+	text-align: center;
+
+}
+
+.footer .footer1{
+	width: 30%;
+	height: 150px;
+	background: #004D40;
+	flex: 6;
+	color: white;
+	margin: auto;
+	
+}
+
+.footer .footer1 img {
+	margin: 20px;
+}
+
+
+.footer .footer2{
+	width: 30%;
+	height: 150px;
+	background: #004D40;
+	flex: 6;
+	color: white;
+	margin: auto;
+}
+
+.footer .footer2 h5{
+	color: white;
+	margin: 3px;
+	text-align: center;
+	font-size: 13px;
+
+	}
+
+.footer .footer3{
+	width: 60%;
+	height: 150px;
+	background: #004D40;
+	flex: 6;
+	color: white;
+	margin: auto;
+}
+.footer .footer3 img{
+	margin: 50px 10px 0px 20px;
+	
+}
+
+
+
+/* 버튼 팝업 스타일 */
+*{
+	margin:0; padding:0;
+	}
+a{
+	text-decoration:none;
+	}
+.wrap{
+	padding:10px;
+	}
+
+.btn_open{
+	font-weight:bold; 
+	margin:5px; 
+	padding:4px 6px; 
+	background:#000; 
+	color:#fff;}
+.pop_wrap{
+	position:fixed; 
+	top:0; left:0; 
+	right:0; bottom:0; 
+	background:rgba(0,0,0,.5); 
+	font-size:0; 
+	text-align:center;
+	}
+.pop_wrap:after
+	{display:inline-block; 
+	height:100%; 
+	vertical-align:middle; 
+	content:'';
+	}
+.pop_wrap .pop_inner{
+	display:inline-block; 
+	padding:20px 30px; 
+	background:#fff; 
+	width:200px; 
+	vertical-align:middle; 
+	font-size:15px;
+	}
+
+
+
+
+
+
